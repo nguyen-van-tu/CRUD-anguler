@@ -68,7 +68,6 @@ export class ProductService {
         this.products[i] = p;
       }
     }
-
   }
 
   // tslint:disable-next-line:typedef

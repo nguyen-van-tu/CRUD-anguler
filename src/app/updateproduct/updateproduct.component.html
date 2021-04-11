@@ -1,1 +1,13 @@
-<p>updateproduct works!</p>
+<h1>Update product</h1>
+
+<form (ngSubmit)="updateProduct()">
+  <h3>Name</h3>
+  <input name = "name" type="text" [(ngModel)]="product.name">
+  <h3>Price</h3>
+  <input name = "name" type="number" [(ngModel)]="product.price">
+  <h3>Description</h3>
+  <input name = "description" type="text" [(ngModel)]="product.description">
+<br>
+<br>
+  <button type="submit" >Update</button>
+</form>

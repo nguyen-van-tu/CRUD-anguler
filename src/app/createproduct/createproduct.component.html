@@ -1,11 +1,25 @@
 <h1>Create product</h1>
 
+<!--<form>-->
+<!--  <label>Name</label>-->
+<!--  <input name = "name" type="text" [(ngModel)]="product.name">-->
+<!--  <label>Price</label>-->
+<!--  <input name = "name" type="text" [(ngModel)]="product.price">-->
+<!--  <label>Description</label>-->
+<!--  <input name = "name" type="text" [(ngModel)]="product.description">-->
+<!--  <button type="submit" (click)="createProduct()">Create</button>-->
+<!--</form>-->
 <form>
-  <label>Name</label>
-  <input name = "name" type="text" [(ngModel)]="product.name">
-  <label>Price</label>
-  <input name = "name" type="number" [(ngModel)]="product.price">
-  <label>Description</label>
-  <input name = "name" type="text" [(ngModel)]="product.description">
+  <table>
+    <tr>
+    <h3>Name</h3>
+    <td><input name = "name" type="text" [(ngModel)]="product.name"></td>
+    <h3>Price</h3>
+    <td><input name = "name" type="number" [(ngModel)]="product.price"></td>
+    <h3>Description</h3>
+    <td><input name = "name" type="text" [(ngModel)]="product.description"></td>
+    </tr>
+  </table>
   <button type="submit" (click)="createProduct()">Create</button>
+
 </form>
