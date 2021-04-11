@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {Iproduct} from '../iproduct';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {ProductService} from '../product.service';
 
 @Component({
@@ -20,12 +20,18 @@ export class UpdateproductComponent implements OnInit {
 
   constructor(private router: Router,
               private productService: ProductService,
-              private activatedRouter: ActivatedRoute) { }
+              private activatedRouter: ActivatedRoute) {
+    this.sub = this.activatedRouter.paramMap.subscribe((paraMap: ParamMap) => {
+      this.product.id = +paraMap.get('id');
+      this.getProductById(this.product.id);
+    });
+  }
 
   ngOnInit(): void {
   }
+
   private getProductById(id: number) {
-    this.product =  this.productService.getProductById(id);
+    this.product = this.productService.getProductById(id);
   }
 
   updateProduct() {
