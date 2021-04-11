@@ -1,0 +1,11 @@
+<h1>Create product</h1>
+
+<form>
+  <label>Name</label>
+  <input name = "name" type="text" [(ngModel)]="product.name">
+  <label>Price</label>
+  <input name = "name" type="number" [(ngModel)]="product.price">
+  <label>Description</label>
+  <input name = "name" type="text" [(ngModel)]="product.description">
+  <button type="submit" (click)="createProduct()">Create</button>
+</form>
