@@ -20,9 +20,13 @@ export class ListproductComponent implements OnInit {
   }
 
   showAllProduct() {
-    this.products =  this.productService.getAllProduct();
+    // this.products =  this.productService.getAllProduct();
+    this.productService.getAllProduct().subscribe(products => {
+      this.products = products;
+    });
   }
-  deleteProduct(id: number){
+
+  deleteProduct(id: number) {
     this.productService.deleteProduct(id);
   }
 }

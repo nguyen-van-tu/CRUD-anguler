@@ -8,6 +8,7 @@ import { ListproductComponent } from './listproduct/listproduct.component';
 import { UpdateproductComponent } from './updateproduct/updateproduct.component';
 import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

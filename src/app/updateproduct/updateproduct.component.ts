@@ -31,11 +31,16 @@ export class UpdateproductComponent implements OnInit {
   }
 
   private getProductById(id: number) {
-    this.product = this.productService.getProductById(id);
+    // this.product = this.productService.getProductById(id);
+    this.productService.getProductById(id).subscribe(a => {
+      this.product = a;
+    });
   }
 
   updateProduct() {
-    this.productService.updateProduct(this.product);
-    this.router.navigate(['/']);
+    // this.productService.updateProduct(this.product)
+    this.productService.updateProduct(this.product.id, this.product).subscribe(() => {
+      this.router.navigate(['/']);
+    });
   }
 }
